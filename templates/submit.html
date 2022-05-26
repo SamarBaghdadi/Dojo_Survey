@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/bootstrap.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Hello, you are in Submit</h1>
+    <div class="container center_div">
+      <h1>Submitted info</h1>
+      <div class="form-group row">
+        <label for="Name" class="col-sm-2 col-form-label">Name:</label>
+        <label>{{session['name']}}</label>
+      </div>
+      <div class="form-group row">
+        <label for="Location" class="col-sm-2 col-form-label"
+          >Dojo Location:</label
+        >
+        <label>{{session['location']}}</label>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="favlang"
+          >Favorite Langage:</label
+        >
+        <label>{{session['favlang']}}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="Comment">Comment:</label>
+        <label>{{session['comments']}}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="Comment">Gender:</label>
+        <label>{{session['gridRadios']}}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="notif"
+          >Notifications:</label
+        >
+        <label>{{session['notif']}}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="20min"
+          >20 minutes rule:</label
+        >
+        <label>{{session['20min']}}</label>
+      </div>
+    </div>
+  </body>
+</html>
